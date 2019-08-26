@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F6C78B662F27644CD851C84 /* libPods-OrderModule_Category.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 440A7E2081929E40F8B18764 /* libPods-OrderModule_Category.a */; };
 		33AF534323138D2800A92833 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF534223138D2800A92833 /* AppDelegate.m */; };
 		33AF534623138D2800A92833 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF534523138D2800A92833 /* ViewController.m */; };
 		33AF534923138D2800A92833 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF534723138D2800A92833 /* Main.storyboard */; };
 		33AF534B23138D2800A92833 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AF534A23138D2800A92833 /* Assets.xcassets */; };
 		33AF534E23138D2800A92833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF534C23138D2800A92833 /* LaunchScreen.storyboard */; };
 		33AF535123138D2800A92833 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF535023138D2800A92833 /* main.m */; };
+		33AF535A23138E4800A92833 /* CCMediator+OrderModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF535923138E4800A92833 /* CCMediator+OrderModule.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,11 @@
 		33AF534D23138D2800A92833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33AF534F23138D2800A92833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33AF535023138D2800A92833 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33AF535823138E4800A92833 /* CCMediator+OrderModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCMediator+OrderModule.h"; sourceTree = "<group>"; };
+		33AF535923138E4800A92833 /* CCMediator+OrderModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CCMediator+OrderModule.m"; sourceTree = "<group>"; };
+		412D4D73ECD6999688ED5413 /* Pods-OrderModule_Category.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderModule_Category.release.xcconfig"; path = "Target Support Files/Pods-OrderModule_Category/Pods-OrderModule_Category.release.xcconfig"; sourceTree = "<group>"; };
+		440A7E2081929E40F8B18764 /* libPods-OrderModule_Category.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrderModule_Category.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BE8B3820192B8FFB1775895 /* Pods-OrderModule_Category.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderModule_Category.debug.xcconfig"; path = "Target Support Files/Pods-OrderModule_Category/Pods-OrderModule_Category.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6C78B662F27644CD851C84 /* libPods-OrderModule_Category.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		029D13B4A06CFF63637B3D92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				440A7E2081929E40F8B18764 /* libPods-OrderModule_Category.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A97D3B18F05F88000DF2755 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8B3820192B8FFB1775895 /* Pods-OrderModule_Category.debug.xcconfig */,
+				412D4D73ECD6999688ED5413 /* Pods-OrderModule_Category.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		33AF533523138D2800A92833 = {
 			isa = PBXGroup;
 			children = (
 				33AF534023138D2800A92833 /* OrderModule_Category */,
 				33AF533F23138D2800A92833 /* Products */,
+				0A97D3B18F05F88000DF2755 /* Pods */,
+				029D13B4A06CFF63637B3D92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +85,7 @@
 		33AF534023138D2800A92833 /* OrderModule_Category */ = {
 			isa = PBXGroup;
 			children = (
+				33AF535723138E1400A92833 /* OrderModule_Category */,
 				33AF534123138D2800A92833 /* AppDelegate.h */,
 				33AF534223138D2800A92833 /* AppDelegate.m */,
 				33AF534423138D2800A92833 /* ViewController.h */,
@@ -71,6 +99,15 @@
 			path = OrderModule_Category;
 			sourceTree = "<group>";
 		};
+		33AF535723138E1400A92833 /* OrderModule_Category */ = {
+			isa = PBXGroup;
+			children = (
+				33AF535823138E4800A92833 /* CCMediator+OrderModule.h */,
+				33AF535923138E4800A92833 /* CCMediator+OrderModule.m */,
+			);
+			path = OrderModule_Category;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +115,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33AF535423138D2800A92833 /* Build configuration list for PBXNativeTarget "OrderModule_Category" */;
 			buildPhases = (
+				F79C58609CC5297810292CA9 /* [CP] Check Pods Manifest.lock */,
 				33AF533A23138D2800A92833 /* Sources */,
 				33AF533B23138D2800A92833 /* Frameworks */,
 				33AF533C23138D2800A92833 /* Resources */,
@@ -136,6 +174,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F79C58609CC5297810292CA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrderModule_Category-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33AF533A23138D2800A92833 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -144,6 +207,7 @@
 				33AF534623138D2800A92833 /* ViewController.m in Sources */,
 				33AF535123138D2800A92833 /* main.m in Sources */,
 				33AF534323138D2800A92833 /* AppDelegate.m in Sources */,
+				33AF535A23138E4800A92833 /* CCMediator+OrderModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +347,7 @@
 		};
 		33AF535523138D2800A92833 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE8B3820192B8FFB1775895 /* Pods-OrderModule_Category.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +364,7 @@
 		};
 		33AF535623138D2800A92833 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 412D4D73ECD6999688ED5413 /* Pods-OrderModule_Category.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CCMediator+OrderModule.h"
 
 @interface ViewController ()
 
@@ -19,5 +20,9 @@
     // Do any additional setup after loading the view.
 }
 
+- (IBAction)clickButton:(id)sender {
+    UIViewController *viewController = [[CCMediator sharedInstance] Order_viewControllerForMakeWithGoodsID:@(10) goodsCount:20];
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:viewController] animated:YES completion:nil];
+}
 
 @end
