@@ -21,7 +21,9 @@
 }
 
 - (IBAction)clickButton:(id)sender {
-    UIViewController *viewController = [[CCMediator sharedInstance] Order_viewControllerForMakeWithGoodsID:@(10) goodsCount:20];
+    UIViewController *viewController = [[CCMediator sharedInstance] Order_viewControllerForMakeWithGoodsID:@(10) goodsCount:20 success:^(NSString * _Nonnull successString) {
+        NSLog(@"%@", successString);
+    }];
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:viewController] animated:YES completion:nil];
 }
 

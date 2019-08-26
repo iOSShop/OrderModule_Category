@@ -15,7 +15,7 @@ NSString * const MediatorActionOrderMakeViewController = @"nativeOrderMakeViewCo
 /**
  *生成订单
  **/
-- (UIViewController *)Order_viewControllerForMakeWithGoodsID:(NSNumber *)goodsID goodsCount:(NSInteger)goodsCount {
+- (UIViewController *)Order_viewControllerForMakeWithGoodsID:(NSNumber *)goodsID goodsCount:(NSInteger)goodsCount success:(SuccessBlock)successBlock {
     if (goodsID == nil) {
         NSException *exception = [[NSException alloc] initWithName:@"Order_viewControllerForMakeWithGoodsID:goodsCount:提示" reason:@"goodsID不能为空" userInfo:nil];
         @throw exception;
@@ -29,6 +29,9 @@ NSString * const MediatorActionOrderMakeViewController = @"nativeOrderMakeViewCo
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"goodsCount"] = [NSNumber numberWithInteger:goodsCount];
     params[@"goodsID"] = goodsID;
+    if (successBlock) {
+        params[@"successBlock"] = successBlock;
+    }
     
     UIViewController *viewController = [self performTarget:MediatorTargetOrder action:MediatorActionOrderMakeViewController params:params shouldCacheTarget:NO];
     if ([viewController isKindOfClass:[UIViewController class]]) {

@@ -10,11 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^SuccessBlock)(NSString *);
+
 @interface CCMediator (OrderModule)
 /**
  *生成订单
  **/
-- (UIViewController *)Order_viewControllerForMakeWithGoodsID:(NSNumber *)goodsID goodsCount:(NSInteger)goodsCount;
+- (UIViewController *)Order_viewControllerForMakeWithGoodsID:(NSNumber *)goodsID goodsCount:(NSInteger)goodsCount success:(SuccessBlock)successBlock;
 @end
 
 NS_ASSUME_NONNULL_END
